@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="240" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="30">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="240" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="33">
  <tileset firstgid="1" source="sky.tsx"/>
  <tileset firstgid="407" source="tilesetgrass.tsx"/>
  <tileset firstgid="434" source="tree.tsx"/>
  <tileset firstgid="484" source="tilesetgrass16.tsx"/>
+ <tileset firstgid="603" source="all-gems.tsx"/>
  <layer id="1" name="background" width="240" height="13">
   <data encoding="base64" compression="zlib">
-   eJzt2FlOwzAQBuA4L5QbADcAjgynYH1h3/d93xdBb0D7yB+pFpHl8WSsVEnKPHxGyowHV81PSk2SJEYppZRSSimlGuQLyze0TfVnUUrJ/GDpQNdUfxalVJj7vB1Kk6QFw2n1Z1P/1wyWWZiDeViARdPffu5Mdfxs6j5vR5DbURjT/A4U7v4uev9Lc7KBZRO2YNvTR9WXsCzDCqzCGqwbeh/VL5nvns3m1f7MstLtCWWZe80x7Bzub4jv+duP85Q9ty6zQnupmu967H1P1bg8cHVpn3WE5RhO4NTTR9V3sOzCHuzDARwaeh/VL5mfP1eWk46jlf7JX3czxb1mCXc29/+t7/lb5nkk720TZ4X2UjXf9dj7nqpxeeDq0j7rBsst3MG9p4+qn2E5hwu4hCu4NvQ+ql8y39ZsdvN5DclnuR34nXlFP4tLv4/y5bfIeWKUObcus0J7qZrveux9T9W4PHB1aZ/1huUdPuDT00fVH7A8whM8wwu8Gnof1S+Zb3q5yjJTNLu+LLeZ12wicknNcfnyy70HscqcW5dZob1UzXc99r6nalweuLq0b5CMIwsTMJmGr0nYvOv3xKoOpoxSqomm4RdpHyvO
+   eJzt2FlOAzEMBuBJXyg3AG4AHIGjcDQ4BesL+77v+74IegPaR/6RGhFFcTyOpuq0+OEzInZMRh0zo5osy4xSSimllFJK9ZAvhG9omO6fRSkl84PQhJbp/lmUqprJWvfP4PKftwM4Xx0GK3ZO9b/MIMzCHMzDAiyaztZzZ6riu+mEI/99CHM7DCM6v32Fu7+L3v/SOdlA2IQt2A7UUfklhGVYgVVYg3VD76PqJf39s9l5tT/zd9NWW2yWuWtOYftw/0NCz99OnKfsvlXpFdtL5ULrqfc9lePmgctL66wjhGM4gdNAHZXfQdiFPdiHAzg09D6qXtLfPVc+J01PvfbHXfdnirtmCb+3/7z1hZ6/ZZ5H8tn2Yq/YXioXWk+976kcNw9cXlpn3SDcwh3cB+qo/BnCOVzAJVzBtaH3UfWS/jZnZ9ed1xh3lhuRv+kq+i7OzasvNL9FzpOizL5V6RXbS+VC66n3PZXj5oHLS+usN4R3+IDPQB2Vf0B4hCd4hhd4NfQ+ql7S37TnKn9PLjq7oVluMNeck35PTPXxheaX+wxSldm3Kr1ie6lcaD31vqdy3DxweWldPxnFLIzBeC2+JmHnXb8nVlUwZZRSvWgafgFl2yWF
   </data>
  </layer>
  <layer id="2" name="graphics" width="240" height="13">
@@ -17,9 +18,9 @@
  <objectgroup id="3" name="ground">
   <object id="6" x="0" y="176" width="3838.67" height="33.3333"/>
   <object id="9" x="1216" y="144" width="48" height="32"/>
-  <object id="12" x="1376" y="128" width="48" height="32"/>
-  <object id="13" x="1440" y="112" width="48" height="32"/>
-  <object id="20" x="1504" y="80" width="48" height="32"/>
+  <object id="12" x="1376" y="128" width="48" height="15.6667"/>
+  <object id="13" x="1440.33" y="111.667" width="48" height="16.3333"/>
+  <object id="20" x="1504" y="80" width="48" height="15.6667"/>
   <object id="21" x="1568" y="48" width="48" height="128"/>
   <object id="23" x="800" y="160" width="288" height="16"/>
   <object id="25" x="816" y="144" width="256" height="16"/>
@@ -28,5 +29,7 @@
   <object id="28" x="912" y="96" width="48" height="16"/>
  </objectgroup>
  <objectgroup id="4" name="platform"/>
- <objectgroup id="6" name="gems"/>
+ <objectgroup id="6" name="gems">
+  <object id="31" x="927.979" y="84" width="15.9167" height="11.8958"/>
+ </objectgroup>
 </map>

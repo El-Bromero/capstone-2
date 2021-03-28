@@ -9,6 +9,7 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
@@ -23,6 +24,8 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 public class GameScreen implements Screen {
 
     private APG game;
+    private TextureAtlas atlas;
+
     private OrthographicCamera camera;
     private Viewport gamePort;
     private HUD hud;
@@ -37,6 +40,8 @@ public class GameScreen implements Screen {
     private Player player;
 
     public GameScreen(APG game) {
+        atlas = new TextureAtlas("Player_and_Enemies.pack");
+
         this.game = game;
         camera = new OrthographicCamera();
         gamePort = new FitViewport(APG.getVWidth() / APG.getPPM(), APG.getVHeight() / APG.getPPM(), camera);
@@ -72,7 +77,11 @@ public class GameScreen implements Screen {
 
         new B2WorldCreator(world, map);
 
-        player = new Player(world);
+        player = new Player(world, this);
+    }
+
+    public TextureAtlas getAtlas() {
+        return atlas;
     }
 
     @Override
@@ -95,6 +104,8 @@ public class GameScreen implements Screen {
 
         world.step(1/60f, 6, 2);
 
+        player.update(dt);
+
         camera.position.x = player.b2Body.getPosition().x;
 
         camera.update();
@@ -111,6 +122,11 @@ public class GameScreen implements Screen {
         renderer.render();
 
         b2dr.render(world, camera.combined);
+
+        game.getBatch().setProjectionMatrix(camera.combined);
+        game.getBatch().begin();
+        player.draw(game.getBatch());
+        game.getBatch().end();
 
         game.getBatch().setProjectionMatrix(hud.getStage().getCamera().combined);
         hud.getStage().draw();
