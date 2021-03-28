@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="240" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="29">
+ <tileset firstgid="1" source="sky.tsx"/>
+ <tileset firstgid="407" source="tilesetgrass.tsx"/>
+ <tileset firstgid="434" source="tree.tsx"/>
+ <tileset firstgid="484" source="tilesetgrass16.tsx"/>
+ <layer id="1" name="background" width="240" height="13">
+  <data encoding="base64" compression="zlib">
+   eJzt2FlOwzAQBuA4L5QbADcAjgynYH1h3/d93xdBb0D7yB+pFpHl8WSsVEnKPHxGyowHV81PSk2SJEYppZRSSimlGuQLyze0TfVnUUrJ/GDpQNdUfxalVJj7vB1Kk6QFw2n1Z1P/1wyWWZiDeViARdPffu5Mdfxs6j5vR5DbURjT/A4U7v4uev9Lc7KBZRO2YNvTR9WXsCzDCqzCGqwbeh/VL5nvns3m1f7MstLtCWWZe80x7Bzub4jv+duP85Q9ty6zQnupmu967H1P1bg8cHVpn3WE5RhO4NTTR9V3sOzCHuzDARwaeh/VL5mfP1eWk46jlf7JX3czxb1mCXc29/+t7/lb5nkk720TZ4X2UjXf9dj7nqpxeeDq0j7rBsst3MG9p4+qn2E5hwu4hCu4NvQ+ql8y39ZsdvN5DclnuR34nXlFP4tLv4/y5bfIeWKUObcus0J7qZrveux9T9W4PHB1aZ/1huUdPuDT00fVH7A8whM8wwu8Gnof1S+Zb3q5yjJTNLu+LLeZ12wicknNcfnyy70HscqcW5dZob1UzXc99r6nalweuLq0b5CMIwsTMJmGr0nYvOv3xKoOpoxSqomm4RdpHyvO
+  </data>
+ </layer>
+ <layer id="2" name="graphics" width="240" height="13">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAAC+BjDAAAE=
+  </data>
+ </layer>
+ <objectgroup id="3" name="ground">
+  <object id="6" x="0" y="176" width="3838.67" height="33.3333"/>
+  <object id="9" x="1216" y="144" width="48" height="32"/>
+  <object id="12" x="1376" y="128" width="48" height="32"/>
+  <object id="13" x="1440" y="112" width="48" height="32"/>
+  <object id="20" x="1504" y="80" width="48" height="32"/>
+  <object id="21" x="1568" y="48" width="48" height="128"/>
+  <object id="23" x="800" y="160" width="288" height="16"/>
+  <object id="25" x="816" y="144" width="256" height="16"/>
+  <object id="26" x="832" y="128" width="224" height="16"/>
+  <object id="27" x="848" y="112" width="160" height="16"/>
+  <object id="28" x="912" y="96" width="48" height="16"/>
+ </objectgroup>
+ <objectgroup id="4" name="platform"/>
+</map>
