@@ -3,6 +3,7 @@ package com.apg.game.screens;
 import com.apg.game.APG;
 import com.apg.game.scenes.HUD;
 import com.apg.game.sprites.Player;
+import com.apg.game.tools.B2WorldCreator;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -69,6 +70,8 @@ public class GameScreen implements Screen {
             body.createFixture(fDef);
         }
 
+        new B2WorldCreator(world, map);
+
         player = new Player(world);
     }
 
@@ -79,7 +82,7 @@ public class GameScreen implements Screen {
 
     public void handleInput(float dt) {
         if (Gdx.input.isKeyJustPressed(Input.Keys.W))
-            player.b2Body.applyLinearImpulse(new Vector2(0, 3f), player.b2Body.getWorldCenter(), true);
+            player.b2Body.applyLinearImpulse(new Vector2(0, 4f), player.b2Body.getWorldCenter(), true);
         if (Gdx.input.isKeyPressed(Input.Keys.D) && player.b2Body.getLinearVelocity().x <= 2)
             player.b2Body.applyLinearImpulse(new Vector2(0.1f, 0), player.b2Body.getWorldCenter(), true);
         if (Gdx.input.isKeyPressed(Input.Keys.A) && player.b2Body.getLinearVelocity().x >= -2)
@@ -135,6 +138,10 @@ public class GameScreen implements Screen {
 
     @Override
     public void dispose() {
-
+        map.dispose();
+        renderer.dispose();
+        world.dispose();
+        b2dr.dispose();
+        hud.dispose();
     }
 }
