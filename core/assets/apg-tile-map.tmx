@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="240" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="39">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="240" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="41">
  <tileset firstgid="1" source="sky.tsx"/>
  <tileset firstgid="407" source="tilesetgrass.tsx"/>
  <tileset firstgid="434" source="tree.tsx"/>
  <tileset firstgid="484" source="tilesetgrass16.tsx"/>
  <tileset firstgid="603" source="all-gems.tsx"/>
+ <tileset firstgid="609" source="present.tsx"/>
+ <tileset firstgid="611" source="grass.tsx"/>
  <layer id="1" name="background" width="240" height="13">
   <data encoding="base64" compression="zlib">
-   eJzt2FdOAzEQBuD1vhBuANwAOEKOCqegvtB7770Xwd6A5JF/pVhYlseztjaKE+bhM8IznjiKJ15FZVmmhBBCCCGEEKKPfGH4hkL1fi9CiDA/GFrQVr3fixCpaSawB5N93w7lWdaA4bz3exP/1wyGWZiDeViARdXdfG5PKT6bNg3l/yPo21EYk/4dKNz5rnr+Q/tkA8MmbMG2I4+KL2FYhhVYhTVYV/Q6Kj+kvr033a/6b/ls2u7w9TL3nmPoOtx3iOv+7cZ+6q6bSi3fWirmmo8991SM6wcuHpqnHWE4hhM4deRR8R0Mu7AH+3AAh4peR+WH1Df3VfZJy9LI/5jzdk+5XlPfj6HP33Zt+761ue5f7jOIVWfdVGr51lIx13zsuadiXD9w8dA87QbDLdzBvSOPip9hOIcLuIQruFb0Oio/pL6O6d41+9XH7OXC85qmqs/iXL/aXP1bZT8x6qybSi3fWirmmo8991SM6wcuHpqnvWF4hw/4dORR8QcMj/AEz/ACr4peR+WH1Fedviqfk6v2rquXC+Y9l0J/J6bq2Fz9y30Gseqsm0ot31oq5pqPPfdUjOsHLh6aN0jG0QsTMJn750LofpffiUUKppQQoh9Nwy+DmSXX
+   eJztl1dywzAMRE1fy7eJc8LUn/Rend57cpFsPjhWOAAh0lJEZ/bjYcZcAIIsrkW7Xq/nCCGEEEIIIWSKGPbHdD0LISSN2f6YrmchpDQGHVxzJuLF8H1L/5ISmEOYBwtgESyBZdduvjVTiWfTQYWfz/Tv/8Ta33X3f6pPthC2wQ7YFfI0fQVhFayBdbABNp1ep+Wn9A9nq/p12P/tjZiXrXvOwfexfkMk/7YxT9N9S+kVq9U0aT1332ua5QdLT83znCCcghE4E/I0fQ9hHxyAQ3AEjp1ep+Wn9K/OFfo1Rugp6Zr+DBw7f0vn5LB3+L4NkfxrPYNcmuxbSq9YraZJ67n7XtMsP1h6ap7nFuEO3IMHIU/TzxEuwCW4Atfgxul1Wn5Kf6+leFfysnXP/hp1zuKWX0Mk/9aZJ4cm+5bSK1aradJ67r7XNMsPlp6a53lH+ACf4EvI0/RHhCfwDF7AK3hzep2Wn9LfTejdqodj9+wUn8XQ+tTpaz2DXJrsW0qvWK2mSeu5+17TLD9YupUX/lecVib1rnSmtq7T1vxdf5dkemhq3xNC/p5vPz1C9A==
   </data>
  </layer>
  <layer id="2" name="graphics" width="240" height="13">
   <data encoding="base64" compression="zlib">
-   eJztyqENAAAIwDDCm/z/BxqDQpHWzCwCAAAAAAAAAP6rnN0eAAAAAO41VzsBGA==
+   eJzt1jERADAIADEOp/g3UQtdgIFEwY8fAQAAAABcVLldAAAAs34e2CcDAAAA9HnZYgEq
   </data>
  </layer>
  <objectgroup id="3" name="ground">
@@ -31,7 +33,7 @@
  <objectgroup id="4" name="platform"/>
  <objectgroup id="6" name="gems">
   <object id="36" x="1152" y="132.364" width="15.8182" height="11.4545"/>
-  <object id="37" x="1184.36" y="132.727" width="15.4545" height="10.5455"/>
   <object id="38" x="1296" y="132" width="16" height="11.5"/>
+  <object id="39" x="1392" y="79.8182" width="16" height="15.8182"/>
  </objectgroup>
 </map>

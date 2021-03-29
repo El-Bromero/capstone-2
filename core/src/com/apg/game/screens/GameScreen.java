@@ -4,10 +4,12 @@ import com.apg.game.APG;
 import com.apg.game.scenes.HUD;
 import com.apg.game.sprites.Player;
 import com.apg.game.tools.B2WorldCreator;
+import com.apg.game.tools.SoundManager;
 import com.apg.game.tools.WorldContactListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -40,6 +42,8 @@ public class GameScreen implements Screen {
 
     private Player player;
 
+    private Music music;
+
     public GameScreen(APG game) {
         atlas = new TextureAtlas("Player_and_Enemies.pack");
 
@@ -61,6 +65,12 @@ public class GameScreen implements Screen {
         player = new Player(world, this);
 
         world.setContactListener(new WorldContactListener());
+
+        music = SoundManager.getInstance().getBgMusic();
+        music.setLooping(true);
+        music.play();
+        music.setVolume(0.1f);
+
     }
 
     public TextureAtlas getAtlas() {
@@ -73,12 +83,19 @@ public class GameScreen implements Screen {
     }
 
     public void handleInput(float dt) {
-        if (Gdx.input.isKeyJustPressed(Input.Keys.W))
+        if (Gdx.input.isKeyJustPressed(Input.Keys.W)) {
+            SoundManager.getInstance().getSoundJump().play();
             player.b2Body.applyLinearImpulse(new Vector2(0, 4f), player.b2Body.getWorldCenter(), true);
-        if (Gdx.input.isKeyPressed(Input.Keys.D) && player.b2Body.getLinearVelocity().x <= 2)
+        }
+
+        if (Gdx.input.isKeyPressed(Input.Keys.D) && player.b2Body.getLinearVelocity().x <= 2) {
             player.b2Body.applyLinearImpulse(new Vector2(0.1f, 0), player.b2Body.getWorldCenter(), true);
-        if (Gdx.input.isKeyPressed(Input.Keys.A) && player.b2Body.getLinearVelocity().x >= -2)
+        }
+
+        if (Gdx.input.isKeyPressed(Input.Keys.A) && player.b2Body.getLinearVelocity().x >= -2) {
             player.b2Body.applyLinearImpulse(new Vector2(-0.1f, 0), player.b2Body.getWorldCenter(), true);
+        }
+
 
     }
 
@@ -88,6 +105,7 @@ public class GameScreen implements Screen {
         world.step(1/60f, 6, 2);
 
         player.update(dt);
+        hud.update(dt);
 
         camera.position.x = player.b2Body.getPosition().x;
 

@@ -118,7 +118,7 @@ public class Player extends Sprite {
         shape.setRadius(8 / APG.getPPM()); // radius
 
         fDef.filter.categoryBits = APG.getPlayerBit();
-        fDef.filter.maskBits = (short) (APG.getDefaultBit() | APG.getGemBit());
+        fDef.filter.maskBits = (short) (APG.getDefaultBit() | APG.getPresentBit());
 
         fDef.shape = shape;
         b2Body.createFixture(fDef);

@@ -1,7 +1,7 @@
 package com.apg.game.tools;
 
 import com.apg.game.APG;
-import com.apg.game.sprites.Gem;
+import com.apg.game.sprites.Present;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
@@ -30,11 +30,11 @@ public class B2WorldCreator {
             body.createFixture(fDef);
         }
 
-        // Create gem (4) bodies/fixtures
+        // Create present (4) bodies/fixtures
         for (MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)) {
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
 
-            new Gem(world, map, rect);
+            new Present(world, map, rect);
         }
     }
 }

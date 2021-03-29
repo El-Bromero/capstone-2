@@ -18,14 +18,12 @@ public class HUD implements Disposable {
 
     private Integer worldTimer;
     private float timeCount;
-    private Integer score;
+    private static Integer score;
 
-    Label countdownLabel;
-    Label scoreLabel;
-    Label timeLabel;
-    Label levelLabel;
-    Label worldLabel;
-    Label personLabel;
+    private Label countdownLabel;
+    private static Label scoreLabel;
+    private Label timeLabel;
+    private Label personLabel;
 
     public HUD(SpriteBatch sb) {
         worldTimer = 300;
@@ -42,16 +40,12 @@ public class HUD implements Disposable {
         countdownLabel = new Label(String.format("%03d", worldTimer), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         scoreLabel = new Label(String.format("%06d", score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         timeLabel = new Label("TIME", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        worldLabel = new Label("LEVEL", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        levelLabel = new Label("1", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         personLabel = new Label("DUDE", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
 
         table.add(personLabel).expandX().padTop(0);
-        table.add(worldLabel).expandX().padTop(0);
         table.add(timeLabel).expandX().padTop(0);
         table.row();
         table.add(scoreLabel).expandX();
-        table.add(levelLabel).expandX();
         table.add(countdownLabel).expandX();
 
         stage.addActor(table);
@@ -59,6 +53,20 @@ public class HUD implements Disposable {
 
     public Stage getStage() {
         return stage;
+    }
+
+    public void update(float dt) {
+        timeCount += dt;
+        if (timeCount >= 1) {
+            worldTimer--;
+            countdownLabel.setText(String.format("%03d", worldTimer));
+            timeCount = 0;
+        }
+    }
+
+    public static void addScore(int value) {
+        score += value;
+        scoreLabel.setText(String.format("%06d", score));
     }
 
     @Override
