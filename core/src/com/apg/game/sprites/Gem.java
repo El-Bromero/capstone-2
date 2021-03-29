@@ -18,5 +18,6 @@ public class Gem extends InteractiveTileObject {
     public void onHeadHit() {
         Gdx.app.log("Gem", "Collision");
         setCategoryFilter(APG.getPickedUpBit());
+        getCell().setTile(null);
     }
 }

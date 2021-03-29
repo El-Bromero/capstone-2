@@ -3,6 +3,7 @@ package com.apg.game.sprites;
 import com.apg.game.APG;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTile;
+import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.*;
 
@@ -40,5 +41,10 @@ public abstract class InteractiveTileObject {
         Filter filter = new Filter();
         filter.categoryBits = filterBit;
         fixture.setFilterData(filter);
+    }
+
+    public TiledMapTileLayer.Cell getCell() {
+        TiledMapTileLayer layer = (TiledMapTileLayer) map.getLayers().get(1);
+        return layer.getCell((int)(body.getPosition().x * APG.getPPM() / 16), (int)(body.getPosition().y * APG.getPPM() / 16));
     }
 }
