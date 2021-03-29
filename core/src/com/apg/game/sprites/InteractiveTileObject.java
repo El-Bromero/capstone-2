@@ -6,12 +6,14 @@ import com.badlogic.gdx.maps.tiled.TiledMapTile;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.*;
 
-public class InteractiveTileObject {
+public abstract class InteractiveTileObject {
     protected World world;
     protected TiledMap map;
     protected TiledMapTile tile;
     protected Rectangle bounds;
     protected Body body;
+
+    protected Fixture fixture;
 
     public InteractiveTileObject(World world, TiledMap map, Rectangle bounds) {
         this.world = world;
@@ -29,6 +31,14 @@ public class InteractiveTileObject {
 
         shape.setAsBox(bounds.getWidth() / 2 / APG.getPPM(), bounds.getHeight() / 2 / APG.getPPM());
         fDef.shape = shape;
-        body.createFixture(fDef);
+        fixture = body.createFixture(fDef);
+    }
+
+    public abstract void onHeadHit();
+
+    public void setCategoryFilter(short filterBit) {
+        Filter filter = new Filter();
+        filter.categoryBits = filterBit;
+        fixture.setFilterData(filter);
     }
 }

@@ -4,6 +4,7 @@ import com.apg.game.APG;
 import com.apg.game.scenes.HUD;
 import com.apg.game.sprites.Player;
 import com.apg.game.tools.B2WorldCreator;
+import com.apg.game.tools.WorldContactListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -55,29 +56,11 @@ public class GameScreen implements Screen {
         world = new World(new Vector2(0, -10), true);
         b2dr = new Box2DDebugRenderer();
 
-        // Gonna be moved to individual entities
-        BodyDef bDef = new BodyDef();
-        PolygonShape shape = new PolygonShape();
-        FixtureDef fDef = new FixtureDef();
-        Body body;
-
-        // get from 2 since ground object is 3rd from bottom of tmx layer
-        for (MapObject object : map.getLayers().get(2).getObjects().getByType(RectangleMapObject.class)) {
-            Rectangle rect = ((RectangleMapObject) object).getRectangle();
-
-            bDef.type = BodyDef.BodyType.StaticBody;
-            bDef.position.set((rect.getX() + rect.getWidth() / 2) / APG.getPPM(), (rect.getY() + rect.getHeight() / 2) / APG.getPPM());
-
-            body = world.createBody(bDef);
-
-            shape.setAsBox(rect.getWidth() / 2 / APG.getPPM(), rect.getHeight() / 2 / APG.getPPM());
-            fDef.shape = shape;
-            body.createFixture(fDef);
-        }
-
         new B2WorldCreator(world, map);
 
         player = new Player(world, this);
+
+        world.setContactListener(new WorldContactListener());
     }
 
     public TextureAtlas getAtlas() {
@@ -110,6 +93,10 @@ public class GameScreen implements Screen {
 
         camera.update();
         renderer.setView(camera);
+
+        if(Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
+            Gdx.app.exit();
+        }
     }
 
     @Override

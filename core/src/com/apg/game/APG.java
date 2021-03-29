@@ -14,6 +14,11 @@ public class APG extends Game {
 	private static final int V_HEIGHT = 208;
 	private static final float PPM = 100; // Pixels per meter
 
+	private static final short DEFAULT_BIT = 1;
+	private static final short PLAYER_BIT = 2;
+	private static final short GEM_BIT = 8;
+	private static final short PICKED_UP_BIT = 16;
+
 	private SpriteBatch batch;
 
 	public SpriteBatch getBatch() {
@@ -32,6 +37,22 @@ public class APG extends Game {
 		return PPM;
 	}
 
+	public static short getDefaultBit() {
+		return DEFAULT_BIT;
+	}
+
+	public static short getPlayerBit() {
+		return PLAYER_BIT;
+	}
+
+	public static short getGemBit() {
+		return GEM_BIT;
+	}
+
+	public static short getPickedUpBit() {
+		return PICKED_UP_BIT;
+	}
+
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
@@ -42,6 +63,8 @@ public class APG extends Game {
 	public void render () {
 		super.render();
 	}
+
+
 	
 //	@Override
 //	public void dispose () {

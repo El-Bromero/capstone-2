@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.utils.Array;
 
@@ -114,9 +115,26 @@ public class Player extends Sprite {
 
         FixtureDef fDef = new FixtureDef();
         CircleShape shape = new CircleShape();
-        shape.setRadius(8 / APG.getPPM()); // rad
+        shape.setRadius(8 / APG.getPPM()); // radius
+
+        fDef.filter.categoryBits = APG.getPlayerBit();
+        fDef.filter.maskBits = (short) (APG.getDefaultBit() | APG.getGemBit());
 
         fDef.shape = shape;
         b2Body.createFixture(fDef);
+
+        // This cancels upward velocity when leaving edge of block
+        FixtureDef fDef2 = new FixtureDef();
+        EdgeShape feet = new EdgeShape();
+        feet.set(new Vector2(-2 / APG.getPPM(), -6 / APG.getPPM()), new Vector2(2 / APG.getPPM(), -6 / APG.getPPM()));
+        fDef2.shape = feet;
+        b2Body.createFixture(fDef2);
+
+        EdgeShape head = new EdgeShape();
+        head.set(new Vector2(-2 / APG.getPPM(), 8 / APG.getPPM()), new Vector2(-2 / APG.getPPM(), 8 / APG.getPPM()));
+        fDef.shape = head;
+        fDef.isSensor = true;
+
+        b2Body.createFixture(fDef).setUserData("head");
     }
 }
