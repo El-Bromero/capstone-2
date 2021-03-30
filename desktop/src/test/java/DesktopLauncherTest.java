@@ -2,7 +2,6 @@ import com.apg.game.APG;
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,7 +18,7 @@ public class DesktopLauncherTest {
         assertNotNull(config);
         assertNotNull(app);
     }
-    
+
     @Test
     void DesktopLauncherIsDesktopTypeTest() {
         Application.ApplicationType expected = Application.ApplicationType.Desktop;
