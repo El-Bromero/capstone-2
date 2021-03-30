@@ -131,6 +131,13 @@ public class GameScreen implements Screen {
 
         game.getBatch().setProjectionMatrix(hud.getStage().getCamera().combined);
         hud.getStage().draw();
+
+        if(Gdx.input.isKeyPressed(Input.Keys.SPACE)) {
+            game.setScreen(new VictoryScreen(game));
+            SoundManager.getInstance().getBgMusic().stop();
+            SoundManager.getInstance().getSoundVictory().play();
+            dispose();
+        }
     }
 
     @Override

@@ -21,16 +21,16 @@ public class WorldContactListener implements ContactListener {
 
     @Override
     public void endContact(Contact contact) {
-
+        // Did not use this method since I do not need to incite code when two fixtures cease to touch
     }
 
     @Override
     public void preSolve(Contact contact, Manifold oldManifold) {
-
+        // Did not use this method since I not to solve anything before making contact between fixtures
     }
 
     @Override
     public void postSolve(Contact contact, ContactImpulse impulse) {
-
+        // Did not use this method since I not to solve anything after making contact between fixtures
     }
 }

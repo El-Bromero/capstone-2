@@ -18,24 +18,18 @@ public class HUD implements Disposable {
 
     private static Integer score;
 
-    private Label countdownLabel;
     private static Label scoreLabel;
     private Label personLabel;
 
     public HUD(SpriteBatch sb) {
         score = 0;
-
         viewport = new FitViewport(APG.getVWidth(), APG.getVHeight(), new OrthographicCamera());
         stage = new Stage(viewport, sb);
-
         Table table = new Table();
         table.top();
         table.setFillParent(true);
-
-        //countdownLabel = new Label(String.format("%03d", worldTimer), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         scoreLabel = new Label(String.format("%06d", score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         personLabel = new Label("SCORE", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-
         table.add(personLabel).expandX().padTop(0);
         table.row();
         table.add(scoreLabel).expandX();
@@ -50,6 +44,10 @@ public class HUD implements Disposable {
     public static void addScore(int value) {
         score += value;
         scoreLabel.setText(String.format("%06d", score));
+    }
+
+    public static Integer getScore() {
+        return score;
     }
 
     @Override
