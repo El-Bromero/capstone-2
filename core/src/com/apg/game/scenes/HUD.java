@@ -26,7 +26,7 @@ public class HUD implements Disposable {
     private Label personLabel;
 
     public HUD(SpriteBatch sb) {
-        worldTimer = 300;
+        worldTimer = 180;
         timeCount = 0;
         score = 0;
 
@@ -40,7 +40,7 @@ public class HUD implements Disposable {
         countdownLabel = new Label(String.format("%03d", worldTimer), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         scoreLabel = new Label(String.format("%06d", score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         timeLabel = new Label("TIME", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        personLabel = new Label("DUDE", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        personLabel = new Label("SCORE", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
 
         table.add(personLabel).expandX().padTop(0);
         table.add(timeLabel).expandX().padTop(0);

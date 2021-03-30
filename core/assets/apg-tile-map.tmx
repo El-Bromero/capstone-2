@@ -7,9 +7,10 @@
  <tileset firstgid="603" source="all-gems.tsx"/>
  <tileset firstgid="609" source="present.tsx"/>
  <tileset firstgid="611" source="grass.tsx"/>
+ <tileset firstgid="613" source="clouds.tsx"/>
  <layer id="1" name="background" width="240" height="13">
   <data encoding="base64" compression="zlib">
-   eJztl1dywzAMRE1fy7eJc8LUn/Rend57cpFsPjhWOAAh0lJEZ/bjYcZcAIIsrkW7Xq/nCCGEEEIIIWSKGPbHdD0LISSN2f6YrmchpDQGHVxzJuLF8H1L/5ISmEOYBwtgESyBZdduvjVTiWfTQYWfz/Tv/8Ta33X3f6pPthC2wQ7YFfI0fQVhFayBdbABNp1ep+Wn9A9nq/p12P/tjZiXrXvOwfexfkMk/7YxT9N9S+kVq9U0aT1332ua5QdLT83znCCcghE4E/I0fQ9hHxyAQ3AEjp1ep+Wn9K/OFfo1Rugp6Zr+DBw7f0vn5LB3+L4NkfxrPYNcmuxbSq9YraZJ67n7XtMsP1h6ap7nFuEO3IMHIU/TzxEuwCW4Atfgxul1Wn5Kf6+leFfysnXP/hp1zuKWX0Mk/9aZJ4cm+5bSK1aradJ67r7XNMsPlp6a53lH+ACf4EvI0/RHhCfwDF7AK3hzep2Wn9LfTejdqodj9+wUn8XQ+tTpaz2DXJrsW0qvWK2mSeu5+17TLD9YupUX/lecVib1rnSmtq7T1vxdf5dkemhq3xNC/p5vPz1C9A==
+   eJztl1dyAyEMhpe9lm8TJzlg6kt6L07vvV0kfx4YbxgJLZhdwMPDpxkjIbTAD1hVVaUK0Zmrq2q+jl9HIb/162ts13G6rquP785ljLY5Ul+TXM9Bl7qnfY76rC/Vsy+n9YpBn3opxJnXPtdtWI+JPa85zl+KxDpzc7hTpo3ZekzMOlJfk9Try5XU53UQYcwZy3yY920I/aa+BoX0WYBZBEtgGayAVdVtvFRTim/TQYO/36ncv4WwSPu77f531ckOzC7YA/tEHOdfg1kHG2ATbIFtxffj4l3ym7U19Tqs/2vDpmXpm33QeaQzhNJvF/WEzptKLltfzke1++57zifpQfK7xmlGMGfgHFwQcZz/AOYQHIFjcAJOFd+Pi3fJ36zL1KsNU1PUmPoNbHt/U+9kM7d535pQ+pXWwJeQeVPJZevL+ah2333P+SQ9SH7XOM09zAN4BE9EHOe/hLkC1+AG3II7xffj4l3ya5+LdiktS9+sx2jzFpf0akLpt009PoTMm0ouW1/OR7X77nvOJ+lB8rvGaT5hvsA3+CHiOP8zzAt4BW/gHXwovh8X75JfTajdpoZt36wYndng8rTJK62BLyHzppLL1pfzUe2++57zSXqQ/FKc+V8xVybVLvWmlsbpqv7Yc1nIh1D7vlAo9M8vaddclA==
   </data>
  </layer>
  <layer id="2" name="graphics" width="240" height="13">

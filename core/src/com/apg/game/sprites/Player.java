@@ -2,7 +2,6 @@ package com.apg.game.sprites;
 
 import com.apg.game.APG;
 import com.apg.game.screens.GameScreen;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -115,7 +114,7 @@ public class Player extends Sprite {
 
         FixtureDef fDef = new FixtureDef();
         CircleShape shape = new CircleShape();
-        shape.setRadius(8 / APG.getPPM()); // radius
+        shape.setRadius(6 / APG.getPPM()); // radius
 
         fDef.filter.categoryBits = APG.getPlayerBit();
         fDef.filter.maskBits = (short) (APG.getDefaultBit() | APG.getPresentBit());

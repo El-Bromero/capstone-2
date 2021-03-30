@@ -1,14 +1,7 @@
 package com.apg.game;
 
 import com.apg.game.screens.GameScreen;
-import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.audio.Music;
-import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class APG extends Game {
@@ -23,8 +16,6 @@ public class APG extends Game {
 	private static final short PICKED_UP_BIT = 16;
 
 	private SpriteBatch batch;
-
-	public static AssetManager manager;
 
 	public SpriteBatch getBatch() {
 		return batch;
