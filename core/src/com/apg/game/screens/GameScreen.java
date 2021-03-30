@@ -41,6 +41,9 @@ public class GameScreen implements Screen {
 
     private Music music;
 
+    private boolean victorious;
+    private boolean gameOver;
+
     public GameScreen(APG game) {
         atlas = new TextureAtlas("Player_and_Enemies.pack");
 
@@ -67,6 +70,9 @@ public class GameScreen implements Screen {
         music.setLooping(true);
         music.play();
         music.setVolume(0.1f);
+
+        victorious = false;
+        gameOver = false;
 
     }
 
@@ -102,7 +108,7 @@ public class GameScreen implements Screen {
         world.step(1/60f, 6, 2);
 
         player.update(dt);
-        hud.update(dt);
+        hud.update(dt, this);
 
         camera.position.x = player.b2Body.getPosition().x;
 
@@ -139,6 +145,29 @@ public class GameScreen implements Screen {
             SoundManager.getInstance().getSoundVictory().play();
             dispose();
         }
+
+        if(gameOver) {
+            game.setScreen(new GameOverScreen(game));
+            SoundManager.getInstance().getBgMusic().stop();
+            SoundManager.getInstance().getSoundGameOver().play();
+            dispose();
+        }
+    }
+
+    public boolean isVictorious() {
+        return victorious;
+    }
+
+    public void setVictorious(boolean victorious) {
+        this.victorious = victorious;
+    }
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
+
+    public void setGameOver(boolean gameOver) {
+        this.gameOver = gameOver;
     }
 
     @Override

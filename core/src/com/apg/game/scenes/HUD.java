@@ -1,6 +1,8 @@
 package com.apg.game.scenes;
 
 import com.apg.game.APG;
+import com.apg.game.screens.GameScreen;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -62,12 +64,15 @@ public class HUD implements Disposable {
         return score;
     }
 
-    public void update(float dt) {
+    public void update(float dt, GameScreen gameScreen) {
         timeCount += dt;
         if (timeCount >= 1) {
             worldTimer--;
             countdownLabel.setText(String.format("%03d", worldTimer));
             timeCount = 0;
+        }
+        if (worldTimer == 0) {
+            gameScreen.setGameOver(true);
         }
     }
 

@@ -10,6 +10,7 @@ public class SoundManager {
     private final Sound soundPresentCollect;
     private final Sound soundJump;
     private final Sound soundVictory;
+    private final Sound soundGameOver;
 
     private static SoundManager soundManager = null;
 
@@ -18,6 +19,7 @@ public class SoundManager {
         soundPresentCollect = Gdx.audio.newSound((Gdx.files.internal("audio/collect-present.wav")));
         soundJump = Gdx.audio.newSound((Gdx.files.internal("audio/player-jump.wav")));
         soundVictory = Gdx.audio.newSound((Gdx.files.internal("audio/victory.wav")));
+        soundGameOver = Gdx.audio.newSound((Gdx.files.internal("audio/game-over.wav")));
     }
 
     public static SoundManager getInstance() {
@@ -41,5 +43,9 @@ public class SoundManager {
 
     public Sound getSoundVictory() {
         return soundVictory;
+    }
+
+    public Sound getSoundGameOver() {
+        return soundGameOver;
     }
 }
