@@ -60,3 +60,13 @@ project(":core") {
         
     }
 }
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
