@@ -88,15 +88,15 @@ public class GameScreen implements Screen {
     public void handleInput(float dt) {
         if (Gdx.input.isKeyJustPressed(Input.Keys.W)) {
             SoundManager.getInstance().getSoundJump().play();
-            player.b2Body.applyLinearImpulse(new Vector2(0, 4f), player.b2Body.getWorldCenter(), true);
+            player.getB2Body().applyLinearImpulse(new Vector2(0, 4f), player.getB2Body().getWorldCenter(), true);
         }
 
-        if (Gdx.input.isKeyPressed(Input.Keys.D) && player.b2Body.getLinearVelocity().x <= 2) {
-            player.b2Body.applyLinearImpulse(new Vector2(0.1f, 0), player.b2Body.getWorldCenter(), true);
+        if (Gdx.input.isKeyPressed(Input.Keys.D) && player.getB2Body().getLinearVelocity().x <= 2) {
+            player.getB2Body().applyLinearImpulse(new Vector2(0.1f, 0), player.getB2Body().getWorldCenter(), true);
         }
 
-        if (Gdx.input.isKeyPressed(Input.Keys.A) && player.b2Body.getLinearVelocity().x >= -2) {
-            player.b2Body.applyLinearImpulse(new Vector2(-0.1f, 0), player.b2Body.getWorldCenter(), true);
+        if (Gdx.input.isKeyPressed(Input.Keys.A) && player.getB2Body().getLinearVelocity().x >= -2) {
+            player.getB2Body().applyLinearImpulse(new Vector2(-0.1f, 0), player.getB2Body().getWorldCenter(), true);
         }
 
 
@@ -110,7 +110,7 @@ public class GameScreen implements Screen {
         player.update(dt);
         hud.update(dt, this);
 
-        camera.position.x = player.b2Body.getPosition().x;
+        camera.position.x = player.getB2Body().getPosition().x;
 
         camera.update();
         renderer.setView(camera);

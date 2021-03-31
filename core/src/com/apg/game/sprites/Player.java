@@ -10,10 +10,10 @@ import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.utils.Array;
 
 public class Player extends Sprite {
-    public State currentState;
-    public State previousState;
-    public World world;
-    public Body b2Body;
+    private State currentState;
+    private State previousState;
+    private World world;
+    private Body b2Body;
     private TextureRegion playerStand;
     private Animation<TextureRegion> playerRun;
     private Animation<TextureRegion> playerJump;
@@ -134,5 +134,9 @@ public class Player extends Sprite {
         fDef.isSensor = true;
 
         b2Body.createFixture(fDef).setUserData("head");
+    }
+
+    public Body getB2Body() {
+        return b2Body;
     }
 }

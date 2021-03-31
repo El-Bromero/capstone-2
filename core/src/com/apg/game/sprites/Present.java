@@ -3,7 +3,6 @@ package com.apg.game.sprites;
 import com.apg.game.APG;
 import com.apg.game.scenes.HUD;
 import com.apg.game.tools.SoundManager;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.World;
