@@ -20,9 +20,7 @@ public class GameOverScreen implements Screen {
 
     private Viewport viewport;
     private Stage stage;
-
     private Game game;
-
     private int totalScore;
 
     public GameOverScreen(Game game) {

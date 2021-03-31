@@ -25,22 +25,16 @@ public class GameScreen implements Screen {
 
     private APG game;
     private TextureAtlas atlas;
-
     private OrthographicCamera camera;
     private Viewport gamePort;
     private HUD hud;
-
     private TmxMapLoader mapLoader;
     private TiledMap map;
     private OrthogonalTiledMapRenderer renderer;
-
     private World world;
     private Box2DDebugRenderer b2dr;
-
     private Player player;
-
     private Music music;
-
     private static boolean victorious;
     private boolean gameOver;
 
