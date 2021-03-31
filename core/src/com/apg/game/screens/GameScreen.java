@@ -154,16 +154,8 @@ public class GameScreen implements Screen {
         }
     }
 
-    public boolean isVictorious() {
-        return victorious;
-    }
-
     public static void setVictorious(boolean victoriousGame) {
         victorious = victoriousGame;
-    }
-
-    public boolean isGameOver() {
-        return gameOver;
     }
 
     public void setGameOver(boolean gameOver) {
