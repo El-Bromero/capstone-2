@@ -45,7 +45,7 @@ public class GameScreen implements Screen {
     private boolean gameOver;
 
     public GameScreen(APG game) {
-        atlas = new TextureAtlas("Player_and_Enemies.pack");
+        atlas = new TextureAtlas("Player.pack");
 
         this.game = game;
         camera = new OrthographicCamera();
