@@ -21,24 +21,26 @@
 * Going to use LWJGL which incorporates OpenGL. I have messed with OpenGL before. There are videos in Youtube and OpenGL has documentation in C
 * Going to need a window for the game to appear in
 * Going to need render function. Set up sprite entities like player and enemy
-*
+* Tiled is a great application for tile map creation. Can look up for free sprite editors online for player and background sprites
+
 <h2>
     3. Executing the Plan
 </h2>
 
 * After trying out LWJGL I have determined it is not the right fit right now. Too much code just to set things up. Going to switch to LibGDX since it seems to be easier to manage and to use their library
 * Have a tile set for the environment of the game. Game character is playable
-* Have present that the player can hit and collect points that way
-* Basic enemy implemented
+* Have present blocks that the player can hit and collect points that way
 * Basic scoring system and timer UI incorporated
 * So far these steps have been correct/working as intended
+* Victory screen if player reaches the gem at the end of the level
+* Game over screen if the player runs out of time
 <h2>
     4. Reflection / Refactor
 </h2>
-*
-*
-*
-*
+* Starting with LWJGL was a mistake for me in the beginning. I should have researched more about that library beforehand. I let my previous experience cloud my judgement
+* A library such as LibGDX was extremely easy to use. Setting up is a lot easier than LWJGL
+* I could have implemented more if I didn't spend as much time on LWJGL instead of LibGDX
+* 
 *
 *
 *

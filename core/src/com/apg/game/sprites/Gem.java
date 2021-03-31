@@ -18,7 +18,6 @@ public class Gem extends InteractiveTileObject {
 
     @Override
     public void onHeadHit() {
-        Gdx.app.log("Gem", "Collision");
         setCategoryFilter(APG.getPickedUpBit());
         GameScreen.setVictorious(true);
         HUD.addScore(100 * HUD.getWorldTimer());

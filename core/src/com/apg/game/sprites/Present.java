@@ -18,7 +18,6 @@ public class Present extends InteractiveTileObject {
 
     @Override
     public void onHeadHit() {
-        Gdx.app.log("Present", "Collision");
         setCategoryFilter(APG.getPickedUpBit());
         getCell().setTile(null);
         SoundManager.getInstance().getSoundPresentCollect().play();

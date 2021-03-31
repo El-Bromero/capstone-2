@@ -10,7 +10,6 @@ import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.utils.Array;
 
 public class Player extends Sprite {
-    public enum State { FALLING, JUMPING, STANDING, RUNNING};
     public State currentState;
     public State previousState;
     public World world;
