@@ -18,7 +18,7 @@ public class HUD implements Disposable {
     private Stage stage;
     private Viewport viewport;
 
-    private Integer worldTimer;
+    private static Integer worldTimer;
     private float timeCount;
     private static Integer score;
 
@@ -28,7 +28,7 @@ public class HUD implements Disposable {
     private Label timeLabel;
 
     public HUD(SpriteBatch sb) {
-        worldTimer = 180;
+        worldTimer = 120;
         timeCount = 0;
         score = 0;
 
@@ -62,6 +62,10 @@ public class HUD implements Disposable {
 
     public static Integer getScore() {
         return score;
+    }
+
+    public static Integer getWorldTimer() {
+        return worldTimer;
     }
 
     public void update(float dt, GameScreen gameScreen) {

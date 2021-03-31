@@ -1,6 +1,7 @@
 package com.apg.game.tools;
 
 import com.apg.game.APG;
+import com.apg.game.sprites.Gem;
 import com.apg.game.sprites.Present;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
@@ -35,6 +36,13 @@ public class B2WorldCreator {
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
 
             new Present(world, map, rect);
+        }
+
+        // Create gem (3) bodies/fixtures
+        for (MapObject object : map.getLayers().get(3).getObjects().getByType(RectangleMapObject.class)) {
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+
+            new Gem(world, map, rect);
         }
     }
 }

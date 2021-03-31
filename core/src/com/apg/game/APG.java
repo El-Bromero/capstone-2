@@ -14,6 +14,7 @@ public class APG extends Game {
 	private static final short PLAYER_BIT = 2;
 	private static final short PRESENT_BIT = 8;
 	private static final short PICKED_UP_BIT = 16;
+	private static final short GEM_BIT = 32;
 
 	private SpriteBatch batch;
 
@@ -47,6 +48,10 @@ public class APG extends Game {
 
 	public static short getPickedUpBit() {
 		return PICKED_UP_BIT;
+	}
+
+	public static short getGemBit() {
+		return GEM_BIT;
 	}
 
 	@Override

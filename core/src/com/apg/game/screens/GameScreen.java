@@ -41,7 +41,7 @@ public class GameScreen implements Screen {
 
     private Music music;
 
-    private boolean victorious;
+    private static boolean victorious;
     private boolean gameOver;
 
     public GameScreen(APG game) {
@@ -139,7 +139,7 @@ public class GameScreen implements Screen {
         game.getBatch().setProjectionMatrix(hud.getStage().getCamera().combined);
         hud.getStage().draw();
 
-        if(Gdx.input.isKeyPressed(Input.Keys.SPACE)) {
+        if(victorious) {
             game.setScreen(new VictoryScreen(game));
             SoundManager.getInstance().getBgMusic().stop();
             SoundManager.getInstance().getSoundVictory().play();
@@ -158,8 +158,8 @@ public class GameScreen implements Screen {
         return victorious;
     }
 
-    public void setVictorious(boolean victorious) {
-        this.victorious = victorious;
+    public static void setVictorious(boolean victoriousGame) {
+        victorious = victoriousGame;
     }
 
     public boolean isGameOver() {

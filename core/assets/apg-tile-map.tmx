@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="240" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="41">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="240" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="55">
  <tileset firstgid="1" source="sky.tsx"/>
  <tileset firstgid="407" source="tilesetgrass.tsx"/>
  <tileset firstgid="434" source="tree.tsx"/>
@@ -10,12 +10,12 @@
  <tileset firstgid="613" source="clouds.tsx"/>
  <layer id="1" name="background" width="240" height="13">
   <data encoding="base64" compression="zlib">
-   eJztl1dyAyEMhpe9lm8TJzlg6kt6L07vvV0kfx4YbxgJLZhdwMPDpxkjIbTAD1hVVaUK0Zmrq2q+jl9HIb/162ts13G6rquP785ljLY5Ul+TXM9Bl7qnfY76rC/Vsy+n9YpBn3opxJnXPtdtWI+JPa85zl+KxDpzc7hTpo3ZekzMOlJfk9Try5XU53UQYcwZy3yY920I/aa+BoX0WYBZBEtgGayAVdVtvFRTim/TQYO/36ncv4WwSPu77f531ckOzC7YA/tEHOdfg1kHG2ATbIFtxffj4l3ym7U19Tqs/2vDpmXpm33QeaQzhNJvF/WEzptKLltfzke1++57zifpQfK7xmlGMGfgHFwQcZz/AOYQHIFjcAJOFd+Pi3fJ36zL1KsNU1PUmPoNbHt/U+9kM7d535pQ+pXWwJeQeVPJZevL+ah2333P+SQ9SH7XOM09zAN4BE9EHOe/hLkC1+AG3II7xffj4l3ya5+LdiktS9+sx2jzFpf0akLpt009PoTMm0ouW1/OR7X77nvOJ+lB8rvGaT5hvsA3+CHiOP8zzAt4BW/gHXwovh8X75JfTajdpoZt36wYndng8rTJK62BLyHzppLL1pfzUe2++57zSXqQ/FKc+V8xVybVLvWmlsbpqv7Yc1nIh1D7vlAo9M8vaddclA==
+   eJztl1dyxCAMho2vtWfJS7zJAVNf0nvvvZeL5PdkmDgMQsCCjXd5+JgdS/oNSAJvVRaFKDJdM4M8zOZcZCypyl+GZXu14/qe2PNqY919eYetRuo5mZRzcFj+MW571Ob8Uj37+pSvLuj7nozSv6ngkoPpxM8p+T1U9TgfXe7fpGHq3z7cKeNGKudp6jlJfX5tEbpeUt/XQQfvNN356n0bIh+p5yATjljn/RyGebAAFsESWBZx/bk5pfhtOmgQMx+ZbuHq27b+a79mzXD1soVhG+yAXY0eZV/BsArWwDrYAJuCjqP8XfTVuTX7tSr/r9XUy9yafZA63Bmi5qO+u2PMJ/Q6U9EyxVI23XPfuqdsXD9wdknds1Olff+eYDgFZ+Bco6ez1zW3hx/74AAcgiNwLP6+JdU4yl/1k/E6/+a81H41ofYUtSa5f1Tt6L6TVW31vlXR5YPLgS8hdVPRMsVSNt1zn7o32aj6ljGcXTIo3O7fOwz34AE8avQo+wWGS3AFrsENuBV0HOXvoi9tLr2r62VuzfIdNt/iXL+q6PJhMx8fQuqmomWKpWy65751T9m4fuDsTT+X/v3A8Am+wLdGj7I/YXgGL+AVvIF3QcdR/i76YsTebfawac3CYt9UKB0bXS4HvoTUTUXLFEvZdM99656ycf3A2VU/Xf+q/xf7yKi9a7sXsfZt3PKRiUuoes9kMt3xA7iBVjY=
   </data>
  </layer>
  <layer id="2" name="graphics" width="240" height="13">
   <data encoding="base64" compression="zlib">
-   eJzt1jERADAIADEOp/g3UQtdgIFEwY8fAQAAAABcVLldAAAAs34e2CcDAAAA9HnZYgEq
+   eJzt1bEJACAMBMDgpu6/hLWNCMEE4W6BpPjnIwAAAHZzdH8AAFSw+QDwF9tNtVPmsnnsyvPNXV0DAAAAeGcBUpgDGQ==
   </data>
  </layer>
  <objectgroup id="3" name="ground">
@@ -30,11 +30,21 @@
   <object id="26" x="832" y="128" width="224" height="16"/>
   <object id="27" x="848" y="112" width="160" height="16"/>
   <object id="28" x="912" y="96" width="48" height="16"/>
+  <object id="47" x="3808.5" y="-0.5" width="31.5" height="176.5"/>
+  <object id="54" x="0.5" y="0" width="15.4091" height="175.818"/>
  </objectgroup>
- <objectgroup id="4" name="platform"/>
- <objectgroup id="6" name="gems">
+ <objectgroup id="4" name="gems">
+  <object id="46" x="772" y="265.5" width="1"/>
+  <object id="48" x="3759.88" y="115.75" width="16.125" height="12.125"/>
+ </objectgroup>
+ <objectgroup id="6" name="presents">
   <object id="36" x="1152" y="132.364" width="15.8182" height="11.4545"/>
   <object id="38" x="1296" y="132" width="16" height="11.5"/>
   <object id="39" x="1392" y="79.8182" width="16" height="15.8182"/>
+  <object id="49" x="304" y="128" width="15.5" height="15.5"/>
+  <object id="50" x="416.5" y="128.5" width="15.5" height="15"/>
+  <object id="51" x="672" y="128" width="16" height="16.5"/>
+  <object id="52" x="928.5" y="48" width="15" height="16"/>
+  <object id="53" x="1632" y="111.5" width="15.5" height="17"/>
  </objectgroup>
 </map>
