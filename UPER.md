@@ -40,8 +40,5 @@
 * Starting with LWJGL was a mistake for me in the beginning. I should have researched more about that library beforehand. I let my previous experience cloud my judgement
 * A library such as LibGDX was extremely easy to use. Setting up is a lot easier than LWJGL
 * I could have implemented more if I didn't spend as much time on LWJGL instead of LibGDX
-* 
-*
-*
-*
-*
+* I was able to utilize many libraries that LibGDX provides for classes such as game screens, sprites, contact listeners, and Box2D
+* I was able to effectively implement all 4 pillars of OOP into my project. I should have attempted to incorporate more OOD patterns into my design.

@@ -60,7 +60,6 @@ public class Player extends Sprite {
 
         TextureRegion region;
         switch (currentState) {
-            // Overriding here
             case JUMPING:
                 region = playerJump.getKeyFrame(stateTimer);
                 break;
