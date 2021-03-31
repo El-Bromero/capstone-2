@@ -79,7 +79,7 @@ public class GameScreen implements Screen {
 
     }
 
-    public void handleInput(float dt) {
+    public void handleInput() {
         if (Gdx.input.isKeyJustPressed(Input.Keys.W)) {
             SoundManager.getInstance().getSoundJump().play();
             player.getB2Body().applyLinearImpulse(new Vector2(0, 4f), player.getB2Body().getWorldCenter(), true);
@@ -97,7 +97,7 @@ public class GameScreen implements Screen {
     }
 
     public void update(float dt) {
-        handleInput(dt);
+        handleInput();
 
         world.step(1/60f, 6, 2);
 

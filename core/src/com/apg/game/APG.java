@@ -18,6 +18,23 @@ public class APG extends Game {
 
 	private SpriteBatch batch;
 
+	@Override
+	public void create () {
+		batch = new SpriteBatch();
+		setScreen(new GameScreen(this));
+	}
+
+	@Override
+	public void render () {
+		super.render();
+	}
+
+	@Override
+	public void dispose () {
+		super.dispose();
+		batch.dispose();
+	}
+
 	public SpriteBatch getBatch() {
 		return batch;
 	}
@@ -52,22 +69,5 @@ public class APG extends Game {
 
 	public static short getGemBit() {
 		return GEM_BIT;
-	}
-
-	@Override
-	public void create () {
-		batch = new SpriteBatch();
-		setScreen(new GameScreen(this));
-	}
-
-	@Override
-	public void render () {
-		super.render();
-	}
-
-	@Override
-	public void dispose () {
-		super.dispose();
-		batch.dispose();
 	}
 }
