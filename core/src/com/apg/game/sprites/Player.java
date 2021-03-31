@@ -66,8 +66,6 @@ public class Player extends Sprite {
             case RUNNING:
                 region = playerRun.getKeyFrame(stateTimer, true);
                 break;
-            case FALLING:
-            case STANDING:
             default:
                 region = playerStand;
                 break;
